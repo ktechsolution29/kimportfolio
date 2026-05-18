@@ -1,0 +1,131 @@
+:root {
+    --primary-red: #E63946;
+    --black: #000000;
+    --dark-grey: #1a1a1a;
+    --soft-white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--black);
+    background-color: var(--soft-white);
+    overflow-x: hidden;
+}
+
+.fw-black { font-weight: 900; font-family: 'Archivo Black', sans-serif; }
+.py-6 { padding: 90px 0; }
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--black);
+}
+
+.line-height-1 { line-height: 1.05; }
+
+/* Hero Styles */
+.hero-image-container { position: relative; }
+.red-accent-box {
+    position: absolute; width: 100%; height: 100%;
+    background: var(--primary-red); top: 25px; left: 25px;
+    z-index: 0; border-radius: 1.5rem;
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.4s ease;
+    border-radius: 20px;
+    background: #fff;
+    text-align: center;
+}
+.icon-circle {
+    width: 60px; height: 60px;
+    background: rgba(230, 57, 70, 0.1);
+    border-radius: 50%; display: flex;
+    align-items: center; justify-content: center;
+    margin: 0 auto; font-size: 1.5rem;
+}
+.service-card:hover {
+    border-color: var(--primary-red) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Portfolio Hover Effect */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    height: 380px;
+    cursor: pointer; /* Ginawang kamay ang mouse pointer */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* Darkens slightly on hover */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+.portfolio-item:hover img { transform: scale(1.1); }
+
+.underline { width: 70px; height: 5px; background: var(--primary-red); margin-top: 15px; }
+
+/* Contact Banner */
+.contact-banner { border-left: 10px solid var(--primary-red) !important; }
+.border-end-custom { border-right: 1px solid #e9ecef; }
+
+/* Responsive */
+@media (max-width: 991px) { .display-1 { font-size: 4.2rem; } }
+@media (max-width: 768px) {
+    .display-1 { font-size: 3.2rem; }
+    .hero-section { text-align: center; }
+    .red-accent-box { display: none; }
+    .border-end-custom { border: none !important; border-bottom: 1px solid #e9ecef !important; padding-bottom: 25px; margin-bottom: 25px; }
+}
+
+/* Work Experience Styles */
+.experience-card {
+    background: #2b2d2f;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.experience-card:hover {
+    background: #36393c;
+}
+
+/* Tools Styles */
+.tool-category-card {
+    border-radius: 15px;
+    border-bottom: 4px solid var(--primary-red);
+}
+
+.tool-icon-box {
+    width: 45px;
+    height: 45px;
+    background: #E63946;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Additional text color for dark backgrounds */
+.text-secondary {
+    color: #b0b3b8 !important;
+}
