@@ -1,2 +1,2 @@
 # kim-tech
-My CV and Portfolio
+My Personal Portfolio
